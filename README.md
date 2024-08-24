@@ -39,6 +39,7 @@ TIMEZONEDB_API_KEY=your_timezonedb_api_key
 Opcionales pero muy recomendables:
 API TESSIE, link referido: https://share.tessie.com/nDAlwNM5LKb 
 #IMPRESCINDIBLE para integración con el coche.
+
 TIMEZONEDB 
 # Para ver la hora local, útil si viajas y hay cambios horarios, la api key se puede conseguir gratis.
 Google Places API - 
