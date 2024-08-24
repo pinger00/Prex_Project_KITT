@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voicebox de Prex</title>
+    <link rel="stylesheet" href="static/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <aside class="panel left">
+            <button id="btn-alt" class="button yellow">ALT</button>
+            <button id="btn-oil-press" class="button yellow">OIL PRESS</button>
+            <button id="btn-oil-temp" class="button red">OIL TEMP</button>
+            <button id="btn-egt" class="button red">EGT</button>
+            <button id="btn-fuel" class="button red">FUEL</button>
+        </aside>
+        <div class="voicebox-container">
+            <div class="controls">
+                <label for="sensitivity">Sensibilidad:</label>
+                <input type="range" id="sensitivity" min="1" max="10" value="5">
+            </div>
+            <div id="voicebox">
+                <div class="column" id="firstColumn"></div>
+                <div class="column" id="centralColumn"></div>
+                <div class="column" id="thirdColumn"></div>
+            </div>
+            <div class="panel center">
+                <button id="btn-normal-cruise" class="button green active">NORMAL CRUISE</button>
+                <button id="btn-auto-cruise" class="button yellow">AUTO CRUISE</button>
+                <button id="btn-pursuit" class="button red">PURSUIT</button>
+            </div>
+        </div>
+        <aside class="panel right">
+            <button id="useMicrophone" class="button yellow">🔉</button>
+            <input type="file" id="audioFile" accept="audio/*" style="display: none;">
+            <button id="selectMP3" class="button yellow">SAT COMM</button>
+            <button id="btn-acc" class="button red">ACC</button>
+            <button id="btn-radar" class="button red">RADAR</button>
+            <button id="btn-mpi" class="button red">MPI</button>
+        </aside>
+    </div>
+    <script src="static/script.js"></script>
+</body>
+
+</html>

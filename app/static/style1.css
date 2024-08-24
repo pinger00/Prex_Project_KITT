@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css?family=Anton');
+
+body {
+    background-color: #000;
+    font-family: 'Anton', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+}
+
+.panel {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 1px;
+    height: 100%;
+}
+
+.panel.left {
+    align-items: flex-end;
+}
+
+.panel.right {
+    align-items: flex-start;
+}
+
+.voicebox-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.controls label {
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.controls input[type="range"] {
+    margin-top: 0px;
+}
+
+#voicebox {
+    display: flex;
+    justify-content: space-around;
+    width: 170px;
+    background-color: #222;
+    padding: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.column {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-around;
+    height: 300px;
+}
+
+.led {
+    width: 30px;
+    height: 15px;
+    background-color: #030000;
+    margin: 2px 0;
+    border-radius: 3px;
+    opacity: 0.3;
+    transition: opacity 0.5s ease-out, background-color 0.5s ease-out;
+    box-shadow: 0 0 5px rgba(255, 0, 0, 0.2);
+}
+
+.led.active {
+    background-color: #bf1115;
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.button {
+    border: 0;
+    display: block;
+    line-height: 1;
+    font-family: 'Anton', sans-serif;
+    border-radius: 8px;
+    width: 100px;
+    text-align: center;
+    padding: 15px;
+    font-size: 22px;
+    height: 60px;
+    margin-bottom: 40px;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
+.button.yellow {
+    background-color: #cbc838;
+    box-shadow: 0 0 5px rgba(203, 200, 56, 0.9);
+}
+
+.button.red {
+    background-color: #bf1115;
+    box-shadow: 0 0 5px rgba(191, 17, 21, 0.9);
+}
+
+.button.green {
+    background-color: #65ea28;
+    box-shadow: 0 0 5px rgba(101, 234, 40, 0.9);
+}
+
+.button:hover,
+.button.active {
+    opacity: 1;
+}
+
+.panel.center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.panel.center .button {
+    width: 120px;
+    margin: 5px 0;
+}
+
+.panel.center .button+.button {
+    margin-top: 0px;
+}
+
+.button.green.active,
+.button.red.active {
+    opacity: 1;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .button {
+        width: 90px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    .voicebox-container {
+        margin: 0 20px;
+    }
+
+    #voicebox {
+        width: 140px;
+        padding: 15px;
+    }
+
+    .led {
+        width: 20px;
+        height: 10px;
+    }
+
+    .panel.center .button {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .button {
+        width: 70px;
+        height: 40px;
+        font-size: 10px;
+    }
+
+    .voicebox-container {
+        margin: 0 10px;
+    }
+
+    #voicebox {
+        width: 140px;
+        padding: 15px;
+    }
+
+    .led {
+        width: 30px;
+        height: 15px;
+    }
+
+    .panel.center .button {
+        width: 150px;
+    }
+}

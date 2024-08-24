@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PreX-Knight_Industries_2024</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login_styles.css') }}">
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-form">
+            <h1>
+                <p style="color:rgb(255, 255, 255);">Knight Industries P.R.E.X</p>
+            </h1>
+            <form method="POST" action="{{ url_for('login') }}">
+                <div class="form-group">
+                    <label for="password">
+                        <center>
+                            <p style="color:rgb(255, 255, 255)">Código acceso:
+                            </p>
+                        </center>
+                    </label>
+                    <input type="password" name="password" id="password" required>
+                </div>
+                <button type="submit">Acceder</button>
+                {% if error %}
+                <p class="error">Acceso no autorizado<br>IP registrada, iniciando rastreo</p>
+                {% endif %}
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
