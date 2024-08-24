@@ -6,48 +6,48 @@ Compatible con MCU2 con la app TeslaDisplay (https://tesladisplay.com/).
 
 ![Manual_uso](https://github.com/user-attachments/assets/eec56b5a-fa73-4ca1-b213-e7ebec364629)
 
-#  ADVERTENCIA !!!!
+##  ADVERTENCIA !!!!
 Este software se ha hecho a base de prueba y error, NO SOY PROGRAMADOR. No me hago responsable de los daños que este software pueda ocasionar. Se hizo en colaboración con varias IA's. Mayormente en ChatGPT, aunque también con ayuda de otros LLM's. 	
 
-#REQUISITOS
+## REQUISITOS
 Configura tu .env. Necesitarás las claves API's de mínimo Elevenlabs (cuenta gratuita), OpenAI (cuenta de pago). Necesitarás un servidor con capacidad para ejecutar código python (puede ser cualquier PC).
 
 ADMIN_PASSWORD=your_admin_password
-# Protege tu vehículo de usos no autorizados, consigue una contraseña lo más fuerte posible.
+Protege tu vehículo de usos no autorizados, consigue una contraseña lo más fuerte posible.
 
 TESSIE_API_KEY=your_tessie_api_key              
-# Imprescindible para comunicar con el vehiculo. Me puedes ayudar a pagar la suscripción a Tessie usando este enlace: https://share.tessie.com/nDAlwNM5LKb  Muchísimas grácias.
+ Imprescindible para comunicar con el vehiculo.
+#Me puedes ayudar a pagar la suscripción a Tessie usando este enlace: https://share.tessie.com/nDAlwNM5LKb  Muchísimas grácias.
 
 VIN=your_vehicle_identification_number          
-# Lo puedes conseguir en la app de Tessie
+Lo puedes conseguir en la app de Tessie
 
 ELEVEN_LABS_API_KEY=your_eleven_labs_api_key    
-# Registrate en una cuenta de pago según tu uso
+Registrate en una cuenta de pago según tu uso
 
 VOICE_ID=sTgnjW6Su298ryjA5cNd                   
-# selecciona la voz desde elevenlabs, por defecto voz Prex
+selecciona la voz desde elevenlabs, por defecto voz Prex
 
 GOOGLE_PLACES_API_KEY=your_google_places_api_key 
-# Registrate para tener acceso a google maps, gratis con un uso pequeño.
+Registrate para tener acceso a google maps, gratis con un uso pequeño.
 
 OPENAI_API_KEY=your_openai_api_key              
-# Consigue tu KEY en openai
+Consigue tu KEY en openai
 
 TIMEZONEDB_API_KEY=your_timezonedb_api_key      
-# Consigue tu KEY en timezonedb, es gratis
+Consigue tu KEY en timezonedb, es gratis
 
-Opcionales pero muy recomendables:
-API TESSIE, link referido: https://share.tessie.com/nDAlwNM5LKb 
-
-#IMPRESCINDIBLE para integración con el coche.
-   
+## Opcionales pero muy recomendables:
+API TESSIE - IMPRESCINDIBLE para integración con el coche.
+link referido: https://share.tessie.com/nDAlwNM5LKb    
 
 TIMEZONEDB 
-# Para ver la hora local, útil si viajas y hay cambios horarios, la api key se puede conseguir gratis.
-Google Places API - 
-#Si se le da poco uso puedes registrate grátis.
+Para ver la hora local, útil si viajas y hay cambios horarios, la api key se puede conseguir gratis.
 
-REQUISITOS OPERATIVOS:
+Google Places API - 
+Si se le da poco uso puedes registrate grátis.
+
+##REQUISITOS OPERATIVOS:
 Python 3.8+
 Flask
 openai
@@ -68,7 +68,7 @@ python-dotenv
 
 3. Crea un archivo `.env` en la raíz del proyecto (usa el archivo `.env.example` como referencia) y agrega tus claves API y variables de entorno.
 
-4. Si tienes un certificado SSL, colócalo en el directorio correspondiente y asegúrate de configurar el servidor con SSL activado.
+4. Crea un certificado SSL y colócalo en el directorio correspondiente y asegúrate de configurar el servidor con SSL activado.
 
 ## Ejecutar el Proyecto
 Para ejecutar el proyecto en modo desarrollo con soporte HTTPS:
@@ -82,8 +82,6 @@ Para ejecutar la aplicación sobre HTTPS, asegúrate de tener tu certificado (`c
    if __name__ == '__main__':
        app.run(host='0.0.0.0', port=5000, ssl_context=('cert.pem', 'key.pem'))
    ```
-
-Para servidores de producción (como Nginx), configura el certificado SSL en el servidor, no en Flask.
 
 ## Comandos
 El archivo `commands.py` te permitirá agregar nuevos comandos que PREX puede ejecutar. Ya vienen configurados algunos comandos básicos como:
@@ -121,8 +119,9 @@ Para agregar nuevos comandos, edita el archivo `commands.py`. Puedes personaliza
 ## Seguridad
 1. Asegúrate de que el archivo `.env` no sea accesible desde el servidor. El proyecto está configurado para que no se sirva nunca este archivo.
 2. Recomendamos servir la aplicación solo bajo HTTPS para asegurar la transmisión de datos.
+3. Recuerda configurar un ADMIN_PASSWORD=your_admin_password en .env seguro.
 
-## ¡Disfruta de PREX y no olvides conectar conmigo en X, usuario: iPhoneGamesDev !
+## ¡Disfruta de PREX y no olvides contactar conmigo en X, usuario: iPhoneGamesDev !
 
 
 ******************************************************************************************
