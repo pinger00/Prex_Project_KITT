@@ -214,35 +214,36 @@ To run the application over HTTPS, make sure you have your certificate (`cert.pe
 # Commands
 The commands.py file will allow you to add new commands that PREX can execute. Some basic commands are already configured such as:
 
-"see the location of the car"
-"share address"
-"send address to navigator"
-"share video"
-"check battery"
-"check remaining kilometers"
-"check local time"
-"search for X nearby"
-"search for a nearby restaurant"
-"search for a nearby hotel"
-"search for a nearby charging point"
-"search for a nearby supercharger"
-"start charging"
-"stop charging"
-"open car"
-"close car"
-"open charging port"
-"honk horn"
-"beep"
-"open trunk"
-"close trunk"
-"flash lights"
-"check the weather"
-"turn on climate control"
-"turn off climate control"
-"set temperature to"
+- "see the location of the car"
+- "share address"
+- "send address to navigator"
+- "share video"
+- "check battery"
+- "check remaining kilometers"
+- "check local time"
+- "search for X nearby"
+- "search for a nearby restaurant"
+- "search for a nearby hotel"
+- "search for a nearby charging point"
+- "search for a nearby supercharger"
+- "start charging"
+- "stop charging"
+- "open car"
+- "close car"
+- "open charging port"
+- "honk horn"
+- "beep"
+- "open trunk"
+- "close trunk"
+- "flash lights"
+- "check the weather"
+- "turn on climate control"
+- "turn off climate control"
+- "set temperature to"
+
 There is no need to memorize them as you can talk normally and the system will detect whether or not it is a command and call the appropriate command. Right now is configured in spanish, but maybe can work in english too without modify anything.
 
-To add new commands, edit the commands.py file. You can customize the name of the car in prex_config.py in the context section. You can also indicate your car model so it knows where it is.
+To add new commands, edit the commands.py file. You can customize the name of the car in prex_config.py in the context section. You can also indicate your car model and name so it knows where it is, even translate the context to your language.
 
 Security
 1. Make sure the .env file is not accessible from the server. The project is set up so that this file is never served.
