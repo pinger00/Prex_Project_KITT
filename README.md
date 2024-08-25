@@ -82,6 +82,7 @@ Para ejecutar la aplicación sobre HTTPS, asegúrate de tener tu certificado (`c
    if __name__ == '__main__':
        app.run(host='0.0.0.0', port=5000, ssl_context=('cert.pem', 'key.pem'))
    ```
+![IMG](https://raw.githubusercontent.com/pinger00/Prex_Project_KITT/main/glif-you-as-a-flux-action-figure-yo-60414a0b5f-dh992rf0x0x177of5qmzm6tw.png)
 
 ## Comandos
 El archivo `commands.py` te permitirá agregar nuevos comandos que PREX puede ejecutar. Ya vienen configurados algunos comandos básicos como:
