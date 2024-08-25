@@ -17,7 +17,7 @@ Protege tu vehículo de usos no autorizados, consigue una contraseña lo más fu
 
 TESSIE_API_KEY=your_tessie_api_key              
  Imprescindible para comunicar con el vehiculo.
-#Me puedes ayudar a pagar la suscripción a Tessie usando este enlace: https://share.tessie.com/nDAlwNM5LKb  Muchísimas grácias.
+#### Me puedes ayudar a pagar la suscripción a Tessie usando este enlace: https://share.tessie.com/nDAlwNM5LKb  Muchísimas grácias.
 
 VIN=your_vehicle_identification_number          
 Lo puedes conseguir en la app de Tessie
@@ -122,7 +122,7 @@ Para agregar nuevos comandos, edita el archivo `commands.py`. Puedes personaliza
 2. Recomendamos servir la aplicación solo bajo HTTPS para asegurar la transmisión de datos.
 3. Recuerda configurar un ADMIN_PASSWORD=your_admin_password en .env seguro.
 
-## ¡Disfruta de PREX y no olvides contactar conmigo en X, usuario: iPhoneGamesDev !
+# Disfruta de PREX y no olvides contactar conmigo en X, usuario: iPhoneGamesDev
 
 
 ******************************************************************************************
@@ -136,47 +136,47 @@ Compatible with MCU2 with the TeslaDisplay app (https://tesladisplay.com/).
 
 ![Manual_uso](https://github.com/user-attachments/assets/eec56b5a-fa73-4ca1-b213-e7ebec364629)
 
-# WARNING !!!!
+## WARNING !!!!
 This software has been made through trial and error, I AM NOT A PROGRAMMER. I am not responsible for any damage this software may cause. It was made in collaboration with several AIs. Mostly in ChatGPT, but also with the help of other LLMs.
 
-# REQUIREMENTS
+## REQUIREMENTS
 Set up your .env. You will need API keys from at least Elevenlabs (free account), OpenAI (paid account). You will need a server capable of running python code (can be any PC).
 
 ADMIN_PASSWORD=your_admin_password
-# Protect your vehicle from unauthorized uses, get the strongest password possible.
+Protect your vehicle from unauthorized uses, get the strongest password possible.
 
-TESSIE_API_KEY=your_tessie_api_key
-# Essential for communicating with the vehicle. You can help me pay for the Tessie subscription using this link: https://share.tessie.com/nDAlwNM5LKb Thank you very much.
+TESSIE_API_KEY=your_tessie_api_key - Essential for communicating with the vehicle. 
+### You can help me pay for the Tessie subscription using this link: https://share.tessie.com/nDAlwNM5LKb Thank you very much.
 
 VIN=your_vehicle_identification_number
-# You can get this in the Tessie app
+You can get this in the Tessie app
 
 ELEVEN_LABS_API_KEY=your_eleven_labs_api_key
-# Sign up for a paid account according to your usage
+Sign up for a paid account according to your usage, there is free ones too.
 
 VOICE_ID=sTgnjW6Su298ryjA5cNd
-# select the voice from elevenlabs, default voice Prex
+select the voice from elevenlabs, default voice Prex
 
 GOOGLE_PLACES_API_KEY=your_google_places_api_key
-# Register to have access to google maps, free with small usage.
+Register to have access to google maps, free with small usage.
 
 OPENAI_API_KEY=your_openai_api_key
-# Get your KEY at openai
+Get your KEY at openai
 
 TIMEZONEDB_API_KEY=your_timezonedb_api_key
-# Get your KEY at timezonedb, it's free
+Get your KEY at timezonedb, it's free
 
 Optional but highly recommended:
 TESSIE API, referral link: https://share.tessie.com/nDAlwNM5LKb
-#ESSENTIAL for integration with the car.
+ESSENTIAL for integration with the car.
 
 
 TIMEZONEDB
-# To check the local time, useful if you travel and there are timezone changes, the api key can be obtained for free.
+To check the local time, useful if you travel and there are timezone changes, the api key can be obtained for free.
 Google Places API -
-#If it is lightly used you can register for free.
+If it is lightly used you can register for free.
 
-OPERATIONAL REQUIREMENTS:
+# OPERATIONAL REQUIREMENTS:
 Python 3.8+
 Flask
 openai
@@ -185,16 +185,14 @@ python-dotenv
 
 ## Installation
 1. Clone the repository to your local machine:
-git clone https://github.com/pinger00/Prex_Project_KITT
-
-markdown
-Copiar código
+   ```
+   git clone https://github.com/pinger00/Prex_Project_KITT
+   ```
 
 2. Install the necessary dependencies:
-pip install -r requirements.txt
-
-javascript
-Copiar código
+   ```
+   pip install -r requirements.txt
+   ```
 
 3. Create a `.env` file at the root of the project (use the `.env.example` file as a reference) and add your API keys and environment variables.
 
@@ -202,19 +200,18 @@ Copiar código
 
 ## Running the Project
 To run the project in development mode with HTTPS support:
-python app/main.py
-
-arduino
-Copiar código
+   ```
+   python app/main.py
+   ```
 
 ## SSL Certificate Configuration
 To run the application over HTTPS, make sure you have your certificate (`cert.pem`) and private key (`key.pem`) ready. Flask can handle HTTPS directly in development as follows:
-```python
-if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, ssl_context=('cert.pem', 'key.pem'))
-For production servers (such as Nginx), configure the SSL certificate on the server, not in Flask.
+   ```python
+   if __name__ == '__main__':
+       app.run(host='0.0.0.0', port=5000, ssl_context=('cert.pem', 'key.pem'))
+   ```
 
-Commands
+# Commands
 The commands.py file will allow you to add new commands that PREX can execute. Some basic commands are already configured such as:
 
 "see the location of the car"
@@ -243,11 +240,13 @@ The commands.py file will allow you to add new commands that PREX can execute. S
 "turn on climate control"
 "turn off climate control"
 "set temperature to"
-There is no need to memorize them as you can talk normally and the system will detect whether or not it is a command and call the appropriate command.
+There is no need to memorize them as you can talk normally and the system will detect whether or not it is a command and call the appropriate command. Right now is configured in spanish, but maybe can work in english too without modify anything.
 
 To add new commands, edit the commands.py file. You can customize the name of the car in prex_config.py in the context section. You can also indicate your car model so it knows where it is.
 
 Security
-Make sure the .env file is not accessible from the server. The project is set up so that this file is never served.
-We recommend serving the application under HTTPS only to secure data transmission.
-Enjoy PREX and don't forget to connect with me on X, user: iPhoneGamesDev!
+1. Make sure the .env file is not accessible from the server. The project is set up so that this file is never served.
+2. We recommend serving the application under HTTPS only to secure data transmission.
+3. Remember to configure a secure ADMIN_PASSWORD=your_admin_password in .env 
+
+# Enjoy PREX and don't forget to connect with me on X, user: iPhoneGamesDev
