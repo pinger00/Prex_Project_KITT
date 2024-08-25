@@ -117,6 +117,10 @@ El archivo `commands.py` te permitirá agregar nuevos comandos que PREX puede ej
 
 Para agregar nuevos comandos, edita el archivo `commands.py`. Puedes personalizar el nombre del coche en `prex_config.py` en la sección contexto. También podrás indicar tu modelo de coche para que sepa donde está. 
 
+## Como usarlo en la pantalla MCU de tu Tesla
+Puedes abrirlo con el navegador normalmente, pero el reconocimiento de audio está desactivado. Para evitar esa restricción haremos uso de la app https://tesladisplay.com/.
+Activamos la app siguiendo sus instrucciones. Abriremos la web en el navegador Chrome de tu teléfono y ya podremos hacer uso de la app en la pantalla. 
+
 ## Seguridad
 1. Asegúrate de que el archivo `.env` no sea accesible desde el servidor. El proyecto está configurado para que no se sirva nunca este archivo.
 2. Recomendamos servir la aplicación solo bajo HTTPS para asegurar la transmisión de datos.
@@ -245,7 +249,12 @@ There is no need to memorize them as you can talk normally and the system will d
 
 To add new commands, edit the commands.py file. You can customize the name of the car in prex_config.py in the context section. You can also indicate your car model and name so it knows where it is, even translate the context to your language.
 
-Security
+## How to Use It on Your Tesla's MCU Screen
+You can open it with the browser normally, but audio recognition is disabled. To bypass this restriction, we will use the app https://tesladisplay.com/.
+Activate the app following its instructions. Open the web in the Chrome browser of your phone and you will be able to use the app on the screen.
+
+
+## Security
 1. Make sure the .env file is not accessible from the server. The project is set up so that this file is never served.
 2. We recommend serving the application under HTTPS only to secure data transmission.
 3. Remember to configure a secure ADMIN_PASSWORD=your_admin_password in .env 
