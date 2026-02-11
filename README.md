@@ -257,6 +257,9 @@ Activate the app following its instructions. Open the web in the Chrome browser 
 ## Security
 1. Make sure the .env file is not accessible from the server. The project is set up so that this file is never served.
 2. We recommend serving the application under HTTPS only to secure data transmission.
-3. Remember to configure a secure ADMIN_PASSWORD=your_admin_password in .env 
+3. Remember to configure a secure ADMIN_PASSWORD=your_admin_password in .env
+
+   ** DETAILED instructions manual **
+   https://deepwiki.com/pinger00/Prex_Project_KITT
 
 # Enjoy PREX and don't forget to connect with me on X, user: iPhoneGamesDev
